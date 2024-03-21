@@ -18,7 +18,7 @@ button.addEventListener("click", ()=>{
     const user_input = [];
     const uppercase_holder =['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     const special_holder =['!', '@', '#', '$', '%', '^', '&', '*', '?'];
-
+    const number_holder =['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
     if(pass_len < 8 || pass_len > 128){
         alert ("password length must be in range from 8 to 128")
     }
@@ -29,6 +29,11 @@ button.addEventListener("click", ()=>{
         else if (holder_values[0]==="special"){
             var first_value =  user_input.concat(special_holder);
         }
+
+        else if (holder_values[0]==="numbers"){
+            var first_value =  user_input.concat(number_holder);
+        }
+
         let final_amount = [];
         if (holder_values.length===1){
             for(var i = 0; i<pass_len; i++){
