@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>password generator</title>
 </head>
+
 <body>
     <div class="wrapper">
-    <header>
-        <h1>password generator</h1>
-    </header>
-    <div class="card">
-        <div class="card_header">
-            <h2>generate a password</h2>
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+        <div class="card">
+            <div class="card_header">
+                <h2>Generate A Password</h2>
+            </div>
+            <div class="card_body">
+                <textarea readonly id="password" placeholder="Your Secure Password"
+                    aria-label="Generated A Password"></textarea>
+            </div>
+            <div class="card_footer">
+                <button id="generate" class="btn">Generate Password</button>
+
+            </div>
+            <div>
+                <p>Select Your Password Needs</p>
+                <div class="center">
+                    <label for="c1"><input type="checkbox" name="requirement" value="lowercase"
+                            id="c1">lowercase</label>
+                    <label for="c2"><input type="checkbox" name="requirement" value="uppercase"
+                            id="c2">uppercase</label>
+                    <label for="c3"><input type="checkbox" name="requirement" value="special" id="c3">special
+                        characters</label>
+                    <label for="c4"><input type="checkbox" name="requirement" value="numbers" id="c4">numbers</label>
+                    <br>
+                    <label for="c5"><input type="number" name="number" value="password_length" id="c5">Password Length
+                        8-128</label>
+                </div>
+            </div>
         </div>
-        <div class="card_body">
-            <textarea 
-            readonly
-            id="password"
-            placeholder="your secure password"
-            aria-label="generated a password"></textarea>
-        </div>
-        <div class="card_footer">
-            <button id="generate" class="btn">generate password</button>
-        </div>
-        <div>
-            <p>select your password needs</p>
-            <label for="c1"><input type="checkbox" name="requirement" value="lowercase" id="c1">lowercase</label>
-            <label for="c2"><input type="checkbox" name="requirement" value="uppercase" id="c2">uppercase</label>
-            <label for="c3"><input type="checkbox" name="requirement" value="special" id="c3">special characters</label>
-            <label for="c4"><input type="checkbox" name="requirement" value="numbers" id="c4">numbers</label>
-            <br>
-            <label for="c5"><input type="number" name="number" value="password_length" id="c5">password length 8-128</label>
-        </div>
-    </div>    
     </div>
-    <script src="script.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
+
 </html>
